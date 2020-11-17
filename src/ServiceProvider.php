@@ -15,10 +15,6 @@ class ServiceProvider extends AddonServiceProvider
         ],
     ];
 
-    protected $subscribe = [
-        'Statamic\Events\AssetUploaded'
-    ];
-
     public function boot()
     {
         parent::boot();
