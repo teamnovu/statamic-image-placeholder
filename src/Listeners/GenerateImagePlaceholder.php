@@ -35,7 +35,7 @@ class GenerateImagePlaceholder
             $tinyImageDataBase64 = base64_encode(file_get_contents($tempDestination));
             $tinyImageBase64 = 'data:image/jpeg;base64,' . $tinyImageDataBase64;
 
-            $svg = view('placeholder-svg', compact(
+            $svg = view('placeholder::placeholder-svg', compact(
                 'originalImageWidth',
                 'originalImageHeight',
                 'tinyImageBase64'

@@ -19,6 +19,8 @@ class ServiceProvider extends AddonServiceProvider
     {
         parent::boot();
 
+        $this->loadViewsFrom(__DIR__ . '/views', 'placeholder');
+
         Resource::map([
             EntryResource::class => CustomEntryResource::class
         ]);
