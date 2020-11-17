@@ -13,6 +13,7 @@
       "Teamnovu\\StatamicImagePlaceholder\\": "src"
     }
   },
+  "license": "MIT",
   "require": {
     "php": "^7.3",
     "statamic/cms": "^3.0.27",
