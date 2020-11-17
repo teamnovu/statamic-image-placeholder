@@ -2,7 +2,7 @@
 
 namespace Teamnovu\StatamicImagePlaceholder;
 
-use App\Http\Resources\CustomEntryResource;
+use Teamnovu\Http\Resources\CustomEntryResource;
 use Statamic\Http\Resources\API\EntryResource;
 use Statamic\Http\Resources\API\Resource;
 use Statamic\Providers\AddonServiceProvider;
