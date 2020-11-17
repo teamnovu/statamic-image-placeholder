@@ -1,0 +1,32 @@
+{
+  "name": "teamnovu/statamic-image-preview",
+  "description": "A Statamic Addon that creates blurred image placeholders for headless use",
+  "keywords": [
+    "Statamic",
+    "V3",
+    "Addon",
+    "Plugin",
+    "Image"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Teamnovu\\StatamicImagePreview\\": "src"
+    }
+  },
+  "require": {
+    "php": "^7.3",
+    "statamic/cms": "^3.0.27",
+    "spatie/image": "^1.9"
+  },
+  "extra": {
+    "statamic": {
+      "name": "Image Preview Addon",
+      "description": "A Statamic Addon that creates blurred image placeholders for headless use"
+    },
+    "laravel": {
+      "providers": [
+        "Teamnovu\\StatamicImagePreview\\ServiceProvider"
+      ]
+    }
+  }
+}
