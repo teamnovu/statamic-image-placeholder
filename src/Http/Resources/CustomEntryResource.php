@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources;
+namespace Teamnovu\StatamicImagePlaceholder\Http\Resources;
 
 use Statamic\Http\Resources\API\EntryResource;
 

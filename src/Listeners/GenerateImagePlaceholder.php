@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Listeners;
+namespace Teamnovu\StatamicImagePlaceholder\Listeners;
 
 use Spatie\Image\Image;
 use Spatie\Image\Manipulations;
 use Statamic\Events\AssetUploaded;
 
-class GenerateImagePreview
+class GenerateImagePlaceholder
 {
     /**
      * Handle the event.
@@ -18,7 +18,7 @@ class GenerateImagePreview
     {
         $imagePath = public_path('assets/' . $event->asset->path());
         $imageExt = pathinfo($imagePath, PATHINFO_EXTENSION);
-        $tempName = uniqid('img_preview');
+        $tempName = uniqid('img_placeholder');
         $tempDestination = public_path('assets/' . $tempName . '.' . $imageExt);
 
         if (!in_array(strtolower($imageExt), array('jpg', 'png', 'gif', 'webp'))) {
@@ -43,7 +43,7 @@ class GenerateImagePreview
 
             $base64Svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
 
-            $event->asset->set('preview', $base64Svg);
+            $event->asset->set('placeholder', $base64Svg);
             $event->asset->save();
         } finally {
             if (file_exists($tempDestination)) {

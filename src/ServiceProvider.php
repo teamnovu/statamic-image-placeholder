@@ -1,6 +1,6 @@
 <?php
 
-namespace Teamnovu\StatamicImagePreview;
+namespace Teamnovu\StatamicImagePlaceholder;
 
 use App\Http\Resources\CustomEntryResource;
 use Statamic\Http\Resources\API\EntryResource;
@@ -11,7 +11,7 @@ class ServiceProvider extends AddonServiceProvider
 {
     protected $listen = [
         'Statamic\Events\AssetUploaded' => [
-            'Teamnovu\StatamicImagePreview\Listeners\GenerateImagePreview',
+            'Teamnovu\StatamicImagePlaceholder\Listeners\GenerateImagePlaceholder',
         ],
     ];
 
