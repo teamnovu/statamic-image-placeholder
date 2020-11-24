@@ -30,7 +30,7 @@ class GenerateImagePlaceholder
             $originalImageHeight = $img->getHeight();
             $originalImageWidth = $img->getWidth();
 
-            $img->optimize()->width(32)->blur(5)->format(Manipulations::FORMAT_JPG)->save($tempDestination);
+            $img->optimize()->width(32)->format(Manipulations::FORMAT_PNG)->save($tempDestination);
 
             $tinyImageDataBase64 = base64_encode(file_get_contents($tempDestination));
             $tinyImageBase64 = 'data:image/jpeg;base64,' . $tinyImageDataBase64;
