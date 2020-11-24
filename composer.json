@@ -1,5 +1,6 @@
 {
   "name": "teamnovu/statamic-image-placeholder",
+  "version": "1.0.2",
   "description": "A Statamic Addon that creates blurred image placeholders for headless use",
   "keywords": [
     "Statamic",
