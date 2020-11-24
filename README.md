@@ -1,9 +1,9 @@
 # Statamic-Image-Placeholder
 
-This statamic 3 add-on generates tiny, blurred svg placeholders for images when they are uploaded.
+This statamic 3 add-on generates tiny svg placeholders for images when they are uploaded.
 These placeholders can be retrieved from the api when using statamic as a headless cms.
 
-Use this together with [vue-statamic-image](https://www.npmjs.com/package/vue-statamic-image) or [nuxt-statamic-image](https://www.npmjs.com/package/nuxt-statamic-image) to display responsive images with a fast and tiny placeholder.
+Use this together with [vue-statamic-image](https://www.npmjs.com/package/vue-statamic-image) or [nuxt-statamic-image](https://www.npmjs.com/package/nuxt-statamic-image) to display responsive images with a fast, tiny and blurred placeholder.
 
 ## Installation
 

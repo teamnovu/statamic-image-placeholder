@@ -1,7 +1,7 @@
 {
   "name": "teamnovu/statamic-image-placeholder",
-  "version": "1.0.2",
-  "description": "A Statamic Addon that creates blurred image placeholders for headless use",
+  "version": "1.0.3",
+  "description": "A Statamic Addon that creates image placeholders for headless use",
   "keywords": [
     "Statamic",
     "V3",
@@ -23,7 +23,7 @@
   "extra": {
     "statamic": {
       "name": "Image Placeholder Addon",
-      "description": "A Statamic Addon that creates blurred image placeholders for headless use"
+      "description": "A Statamic Addon that creates image placeholders for headless use"
     },
     "laravel": {
       "providers": [
