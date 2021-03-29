@@ -16,12 +16,12 @@ class GenerateImagePlaceholder
      */
     public function handle(AssetUploaded $event)
     {
-        $imagePath = public_path('assets/' . $event->asset->path());
+        $imagePath = public_path('assets/'.$event->asset->path());
         $imageExt = pathinfo($imagePath, PATHINFO_EXTENSION);
         $tempName = uniqid('img_placeholder');
-        $tempDestination = public_path('assets/' . $tempName . '.' . $imageExt);
+        $tempDestination = public_path('assets/'.$tempName.'.'.$imageExt);
 
-        if (!in_array(strtolower($imageExt), array('jpg', 'png', 'gif', 'webp'))) {
+        if (! in_array(strtolower($imageExt), ['jpeg', 'jpg', 'png', 'gif', 'webp'])) {
             return;
         }
 
@@ -33,7 +33,7 @@ class GenerateImagePlaceholder
             $img->optimize()->width(32)->format(Manipulations::FORMAT_PNG)->save($tempDestination);
 
             $tinyImageDataBase64 = base64_encode(file_get_contents($tempDestination));
-            $tinyImageBase64 = 'data:image/jpeg;base64,' . $tinyImageDataBase64;
+            $tinyImageBase64 = 'data:image/jpeg;base64,'.$tinyImageDataBase64;
 
             $svg = view('placeholder::placeholder-svg', compact(
                 'originalImageWidth',
@@ -41,7 +41,7 @@ class GenerateImagePlaceholder
                 'tinyImageBase64'
             ));
 
-            $base64Svg = 'data:image/svg+xml;base64,' . base64_encode($svg);
+            $base64Svg = 'data:image/svg+xml;base64,'.base64_encode($svg);
 
             $event->asset->set('placeholder', $base64Svg);
             $event->asset->save();
